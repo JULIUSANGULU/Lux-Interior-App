@@ -62,18 +62,18 @@ flutter:
   fonts:
     - family: Nunito
       fonts:
-        - asset: assets/Nunito/Nunito-Regular.ttf
-        - asset: assets/Nunito/Nunito-Bold.ttf
+        - asset: assets/Fonts/Nunito-Regular.ttf
+        - asset: assets/Fonts/Nunito-Bold.ttf
           weight: 700
-        - asset: assets/Nunito/Nunito-Italic.ttf
+        - asset: assets/Fonts/Nunito-Italic.ttf
           style: italic
-        - asset: assets/Nunito/Nunito-SemiBold.ttf
+        - asset: assets/Fonts/Nunito-SemiBold.ttf
           weight: 600
-        - asset: assets/Nunito/Nunito-Light.ttf
+        - asset: assets/Fonts/Nunito-Light.ttf
           weight: 300
-        - asset: assets/Nunito/Nunito-ExtraBold.ttf
+        - asset: assets/Fonts/Nunito-ExtraBold.ttf
           weight: 800
-        - asset: assets/Nunito/Nunito-ExtraLight.ttf
+        - asset: assets/Fonts/Nunito-ExtraLight.ttf
           weight: 200
   # To add assets to your application, add an assets section, like this:
   # assets:
