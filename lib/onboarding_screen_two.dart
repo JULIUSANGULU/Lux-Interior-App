@@ -33,7 +33,7 @@ class _Screen1State extends State<Screen1> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SvgPicture.asset("assets/images/img.svg"),
+                      SvgPicture.asset("assets/images/img2.svg"),
                     
                       const Text(
                         'High Quality Products',

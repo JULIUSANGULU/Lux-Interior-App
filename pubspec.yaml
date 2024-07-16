@@ -58,6 +58,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/img.svg
+    - assets/images/img2.svg
+    - assets/images/chevronarrow.svg
     - assets/
   fonts:
     - family: Nunito

@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Nunito',
-        useMaterial3: true,
       ),
       home: const Screen1(),
     );

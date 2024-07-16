@@ -78,8 +78,30 @@ class _Screen1State extends State<Screen1> {
             ),
           ),
           // Page Indicator Ends Here//
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const Text("Skip",
+              style: TextStyle(
+              color: Color(0xFF1E5F6E),
+              fontSize: 16,
+              fontFamily: 'Nunito',
+              fontWeight: FontWeight.w600,
+              height: 0.09,)),
+              const SizedBox(width: 10),
+              ElevatedButton(onPressed: (){},
+               style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF1E5F6E),
+                shape: const CircleBorder(),
+                  padding: const EdgeInsets.all(10),
+               ),
+               child: SvgPicture.asset("assets/images/chevronarrow.svg")
+               ),
+            ],
+          )
         ],
-      ),
+      )
     );
   }
 }
