@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class Screen1 extends StatefulWidget {
-  const Screen1({super.key});
+class Screen3 extends StatefulWidget {
+  const Screen3({super.key});
   @override
-  _Screen1State createState() => _Screen1State();
+  _Screen3State createState() => _Screen3State();
 }
 
-class _Screen1State extends State<Screen1> {
+class _Screen3State extends State<Screen3> {
   final PageController _pageController = PageController();
 
   @override
@@ -93,7 +93,7 @@ class _Screen1State extends State<Screen1> {
                 height: 0.09,)),
                 const SizedBox(width: 10),
                 ElevatedButton(onPressed: (){
-                  Navigator.pushNamed(context, '/onboarding2');
+                  Navigator.pushNamed(context, '/onboarding1');
                 },
                  style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF1E5F6E),
