@@ -59,6 +59,8 @@ flutter:
   assets:
     - assets/images/img.svg
     - assets/images/img2.svg
+    - assets/images/img3.svg
+    - assets/images/img4.svg
     - assets/images/chevronarrow.svg
     - assets/
   fonts:

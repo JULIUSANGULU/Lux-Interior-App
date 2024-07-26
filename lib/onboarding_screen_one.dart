@@ -10,11 +10,22 @@ class Screen1 extends StatefulWidget {
 
 class _Screen1State extends State<Screen1> {
   final PageController _pageController = PageController();
+  final int _numPages = 3;
+  bool _isNavigating = false;
 
   @override
   void dispose() {
     _pageController.dispose();
     super.dispose();
+  }
+
+  void _onPageChanged(int page) {
+    if (page == _numPages  && !_isNavigating) {
+      _isNavigating = true;
+      Future.delayed(const Duration(milliseconds: 300), () {
+        Navigator.pushNamed(context, '/onboarding2');
+      });
+    }
   }
 
   @override
@@ -24,9 +35,10 @@ class _Screen1State extends State<Screen1> {
       body: Column(
         children: [
           Expanded(
-            child: PageView.builder(
+           child: PageView.builder(
               controller: _pageController,
-              itemCount: 5,
+              itemCount: _numPages,
+              onPageChanged: _onPageChanged,
               itemBuilder: (_, i) {
                 return Padding(
                   padding: const EdgeInsets.all(10),
@@ -68,7 +80,7 @@ class _Screen1State extends State<Screen1> {
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 120),
             child: SmoothPageIndicator(
               controller: _pageController,
-              count: 3,
+              count: _numPages,
               effect: const WormEffect(
                 dotColor: Color(0xFFFFFFFF),
                 activeDotColor: Color(0xFF1E5F6E),
@@ -93,7 +105,7 @@ class _Screen1State extends State<Screen1> {
                 height: 0.09,)),
                 const SizedBox(width: 10),
                 ElevatedButton(onPressed: (){
-                  Navigator.pushNamed(context, '/onboarding2');
+                  Navigator.pushNamed(context, '/onboarding4');
                 },
                  style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF1E5F6E),
