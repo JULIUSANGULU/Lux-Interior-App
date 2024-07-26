@@ -62,6 +62,14 @@ flutter:
     - assets/images/img3.svg
     - assets/images/img4.svg
     - assets/images/chevronarrow.svg
+    - assets/images/chevronarrow2.svg
+    - assets/images/user.svg
+    - assets/images/mail.svg
+    - assets/images/lock.svg
+    - assets/images/eyeoff.svg
+    - assets/images/googleicon.svg
+    - assets/images/applelogo.svg
+    - assets/images/successful.svg
     - assets/
   fonts:
     - family: Nunito
