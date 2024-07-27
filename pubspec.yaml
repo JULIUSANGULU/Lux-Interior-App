@@ -70,6 +70,7 @@ flutter:
     - assets/images/googleicon.svg
     - assets/images/applelogo.svg
     - assets/images/successful.svg
+    - assets/images/forgotpassword.svg
     - assets/
   fonts:
     - family: Nunito
