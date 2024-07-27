@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class Forgotpassword extends StatefulWidget {
-  const Forgotpassword({super.key});
+class NewPassword extends StatefulWidget {
+  const NewPassword({super.key});
 
   @override
-  State<Forgotpassword> createState() => _ForgotpasswordState();
+  State<NewPassword> createState() => _NewPasswordState();
 }
 
-class _ForgotpasswordState extends State<Forgotpassword> {
+class _NewPasswordState extends State<NewPassword> {
+  bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFEFF0F0),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -38,16 +40,21 @@ class _ForgotpasswordState extends State<Forgotpassword> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SvgPicture.asset("assets/images/forgotpassword.svg"),
-            const Text(
-              "Forgot Password",
-              style: TextStyle(
-                color: Color(0xFF2A2A2A),
-                fontSize: 25,
-                fontFamily: 'Nunito',
-                fontWeight: FontWeight.w600,
-                height: 0.06,
+            const Padding(
+              padding: EdgeInsets.fromLTRB(10, 50, 0, 0),
+              child: Text(
+                "New Password",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 25,
+                  fontFamily: 'Nunito',
+                  fontWeight: FontWeight.w600,
+                  height: 0.06,
+                ),
               ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
             const Padding(
               padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
@@ -55,7 +62,7 @@ class _ForgotpasswordState extends State<Forgotpassword> {
                 width: 361,
                 height: 53,
                 child: Text(
-                  'Please enter your Email address to receive a Verification code',
+                  'Your new password must be different from the previously used password',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xFF828383),
@@ -68,21 +75,68 @@ class _ForgotpasswordState extends State<Forgotpassword> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                top: 13,
-                left: 24,
-                right: 24,
-                bottom: 13,
-              ),
+              padding: const EdgeInsets.fromLTRB(12, 13, 23, 13),
               child: TextFormField(
+                obscureText: _obscureText,
                 decoration: InputDecoration(
-                  hintText: 'Email',
+                  hintText: 'New Password',
                   hintStyle: const TextStyle(
                     color: Color(0xFF636464),
                     fontSize: 14,
                     fontFamily: 'Nunito',
                     fontWeight: FontWeight.w500,
                     height: 0.10,
+                  ),
+                  suffixIcon: IconButton(
+                    icon: SvgPicture.asset(
+                      _obscureText
+                          ? "assets/images/eyeoff.svg"
+                          : "assets/images/eyeoff.svg",
+                      width: 20,
+                      height: 20,
+                      fit: BoxFit.contain,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _obscureText = !_obscureText;
+                      });
+                    },
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    borderSide:
+                        const BorderSide(width: 2, color: Color(0xFFB7B8B8)),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(12, 13, 23, 13),
+              child: TextFormField(
+                obscureText: _obscureText,
+                decoration: InputDecoration(
+                  hintText: 'Confirm Password',
+                  hintStyle: const TextStyle(
+                    color: Color(0xFF636464),
+                    fontSize: 14,
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.w500,
+                    height: 0.10,
+                  ),
+                  suffixIcon: IconButton(
+                    icon: SvgPicture.asset(
+                      _obscureText
+                          ? "assets/images/eyeoff.svg"
+                          : "assets/images/eyeoff.svg",
+                      width: 20,
+                      height: 20,
+                      fit: BoxFit.contain,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _obscureText = !_obscureText;
+                      });
+                    },
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20.0),
@@ -93,7 +147,7 @@ class _ForgotpasswordState extends State<Forgotpassword> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 40,
             ),
             SizedBox(
               width: 360,
@@ -109,7 +163,7 @@ class _ForgotpasswordState extends State<Forgotpassword> {
                   ),
                 ),
                 child: const Text(
-                  'Confirm Email',
+                  'Confirm Password',
                   style: TextStyle(
                     color: Color(0xFFE9EFF1),
                     fontSize: 14,

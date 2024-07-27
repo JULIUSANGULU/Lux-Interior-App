@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lux_interio_app_new/forgotpassword.dart';
 import 'package:lux_interio_app_new/login_successful.dart';
+import 'package:lux_interio_app_new/new_password.dart';
 import 'package:lux_interio_app_new/onboarding_screen_four.dart';
 import 'package:lux_interio_app_new/onboarding_screen_one.dart';
 import 'package:lux_interio_app_new/onboarding_screen_three.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/signin': (context) => const Signin(),
         '/forgotpassword': (context) => const Forgotpassword(),
         '/loginsuccessful': (context) => const LoginSuccessful(),
+        '/newpassword': (context) => const NewPassword(),
       },
       //End of routes definition//
     );
