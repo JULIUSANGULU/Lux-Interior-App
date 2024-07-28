@@ -154,7 +154,7 @@ class _NewPasswordState extends State<NewPassword> {
               height: 50,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/newpassword');
+                  Navigator.pushNamed(context, '/verifyemail');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF1E5F6E),

@@ -147,7 +147,16 @@ class _SigninState extends State<Signin> {
                       });
                     },
                   ),
-                  const Text('Remember me'),
+                  const Text(
+                    'Remember me',
+                    style: TextStyle(
+                      color: Color(0xFF363737),
+                      fontSize: 12,
+                      fontFamily: 'Nunito',
+                      fontWeight: FontWeight.w500,
+                      height: 0.12,
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(70, 0, 0, 0),
                     child: GestureDetector(

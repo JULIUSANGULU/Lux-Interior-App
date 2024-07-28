@@ -8,6 +8,7 @@ import 'package:lux_interio_app_new/onboarding_screen_three.dart';
 import 'package:lux_interio_app_new/onboarding_screen_two.dart';
 import 'package:lux_interio_app_new/signin.dart';
 import 'package:lux_interio_app_new/signup.dart';
+import 'package:lux_interio_app_new/verify_emailaddress.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/forgotpassword': (context) => const Forgotpassword(),
         '/loginsuccessful': (context) => const LoginSuccessful(),
         '/newpassword': (context) => const NewPassword(),
+        '/verifyemail': (context) => const VerifyEmailaddress(),
       },
       //End of routes definition//
     );
