@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lux_interio_app_new/forgotpassword.dart';
+import 'package:lux_interio_app_new/home.dart';
 import 'package:lux_interio_app_new/login_successful.dart';
 import 'package:lux_interio_app_new/new_password.dart';
 import 'package:lux_interio_app_new/onboarding_screen_four.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/loginsuccessful': (context) => const LoginSuccessful(),
         '/newpassword': (context) => const NewPassword(),
         '/verifyemail': (context) => const VerifyEmailaddress(),
+        '/home': (context) => const Homepage(),
       },
       //End of routes definition//
     );

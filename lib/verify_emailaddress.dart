@@ -146,7 +146,7 @@ class _VerifyEmailaddressState extends State<VerifyEmailaddress> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/forgotpassword');
+                  Navigator.pushNamed(context, '/home');
                 },
                 child: const Text(
                   "Now",
