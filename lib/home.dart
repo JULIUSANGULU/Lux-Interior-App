@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Homepage extends StatefulWidget {
@@ -179,7 +180,7 @@ class _HomepageState extends State<Homepage> {
                                     ),
                                     SvgPicture.asset(
                                       'assets/images/arrowback.svg',
-                                      fit: BoxFit.fitWidth,
+                                      fit: BoxFit.fill,
                                     ),
                                   ],
                                 ),
@@ -189,14 +190,13 @@ class _HomepageState extends State<Homepage> {
                         ),
                       ),
                       Positioned(
-                        right: 0,
-                        bottom: 0,
-                        child: SvgPicture.asset(
+                        right: -20,
+                        bottom: -20,
+                        child: ClipRect(
+                            child: SvgPicture.asset(
                           'assets/images/chair.svg',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.contain,
-                        ),
+                          fit: BoxFit.cover,
+                        )),
                       ),
                     ],
                   ),
@@ -204,6 +204,44 @@ class _HomepageState extends State<Homepage> {
               ),
             ],
           ),
+          Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Text(
+                  'Categories',
+                  style: TextStyle(
+                    color: Color(0xFF2A2A2A),
+                    fontSize: 25,
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.w600,
+                    height: 0.06,
+                  ),
+                ),
+                const SizedBox(
+                  width: 140,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/home');
+                  },
+                  child: const Text(
+                    "See All",
+                    style: TextStyle(
+                      color: Color(0xFF1E5F6E),
+                      fontSize: 14,
+                      fontFamily: 'Nunito',
+                      fontWeight: FontWeight.w300,
+                      decoration: TextDecoration.underline,
+                      decorationColor: Color(0xFF1E5F6E),
+                      height: 0.10,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
