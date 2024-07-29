@@ -76,6 +76,8 @@ flutter:
     - assets/images/cartoutline.svg
     - assets/images/searchicon.svg
     - assets/images/sliderfilter.svg
+    - assets/images/arrowback.svg
+    - assets/images/chair.svg
     - assets/
   fonts:
     - family: Nunito

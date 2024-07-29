@@ -50,6 +50,7 @@ class _HomepageState extends State<Homepage> {
         ],
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.all(16.0),
@@ -74,27 +75,24 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
                 suffixIcon: Padding(
-                  padding:
-                      const EdgeInsets.all(8.0), // Adjust padding as needed
+                  padding: const EdgeInsets.all(8.0),
                   child: SvgPicture.asset(
-                    "assets/images/sliderfilter.svg", // Your search icon asset path
+                    "assets/images/sliderfilter.svg",
                     width: 20,
                     height: 20,
                     fit: BoxFit.contain,
                   ),
                 ),
                 border: OutlineInputBorder(
-                  borderRadius:
-                      BorderRadius.circular(10.0), // Custom border radius
-                  borderSide: BorderSide.none, // Remove the border
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide.none,
                 ),
-                contentPadding: const EdgeInsets.symmetric(
-                    vertical: 10.0), // Adjust padding inside the text field
+                contentPadding: const EdgeInsets.symmetric(vertical: 10.0),
               ),
             ),
           ),
           const Padding(
-            padding: EdgeInsets.fromLTRB(24, 0, 0, 0),
+            padding: EdgeInsets.fromLTRB(24, 40, 0, 0),
             child: Text(
               "Special Offers",
               style: TextStyle(
@@ -105,6 +103,106 @@ class _HomepageState extends State<Homepage> {
                 height: 0.09,
               ),
             ),
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Container(
+                  width: 320,
+                  height: 168,
+                  decoration: ShapeDecoration(
+                    color: const Color(0xFF1E5F6E),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Stack(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 30, 0, 0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              '30%',
+                              style: TextStyle(
+                                color: Color(0xFFE9EFF1),
+                                fontSize: 25,
+                                fontFamily: 'Nunito',
+                                fontWeight: FontWeight.w600,
+                                height: 0.06,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            const Text(
+                              'Special Discount',
+                              style: TextStyle(
+                                color: Color(0xFFE9EFF1),
+                                fontSize: 16,
+                                fontFamily: 'Nunito',
+                                fontWeight: FontWeight.w600,
+                                height: 0.09,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 18,
+                            ),
+                            SizedBox(
+                              width: 160,
+                              height: 50,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/newpassword');
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xFF1E5F6E),
+                                  shape: RoundedRectangleBorder(
+                                    side: const BorderSide(
+                                        width: 1, color: Color(0xFFE9EFF1)),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                ),
+                                child: Row(
+                                  children: [
+                                    const Text(
+                                      'Shop Now',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                        fontFamily: 'Nunito',
+                                        fontWeight: FontWeight.w600,
+                                        height: 0.09,
+                                      ),
+                                    ),
+                                    SvgPicture.asset(
+                                      'assets/images/arrowback.svg',
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                        right: 0,
+                        bottom: 0,
+                        child: SvgPicture.asset(
+                          'assets/images/chair.svg',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
