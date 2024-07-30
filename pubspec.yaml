@@ -78,6 +78,9 @@ flutter:
     - assets/images/sliderfilter.svg
     - assets/images/arrowback.svg
     - assets/images/chair.svg
+    - assets/images/img5.svg
+    - assets/images/tableEllipse.svg
+    - assets/images/Ellipse1.png
    
     - assets/
   fonts:

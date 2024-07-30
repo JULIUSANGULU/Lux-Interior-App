@@ -230,7 +230,7 @@ class _HomepageState extends State<Homepage> {
                     "See All",
                     style: TextStyle(
                       color: Color(0xFF1E5F6E),
-                      fontSize: 14,
+                      fontSize: 19.6,
                       fontFamily: 'Nunito',
                       fontWeight: FontWeight.w300,
                       decoration: TextDecoration.underline,
@@ -241,6 +241,39 @@ class _HomepageState extends State<Homepage> {
                 ),
               ],
             ),
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Column(
+                children: [
+                  Container(
+                    height: 80,
+                    width: 80,
+                    decoration: const ShapeDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/img.svg"),
+                        fit: BoxFit.fill,
+                      ),
+                      shape: OvalBorder(),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const Text(
+                    'Table',
+                    style: TextStyle(
+                      color: Color(0xFF2A2A2A),
+                      fontSize: 16,
+                      fontFamily: 'Nunito',
+                      fontWeight: FontWeight.w600,
+                      height: 0.09,
+                    ),
+                  )
+                ],
+              )
+            ],
           )
         ],
       ),
