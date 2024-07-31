@@ -81,6 +81,10 @@ flutter:
     - assets/images/img5.svg
     - assets/images/tableEllipse.svg
     - assets/images/Ellipse1.png
+    - assets/images/Ellipse2.png
+    - assets/images/Ellipse3.png
+    - assets/images/Ellipse4.png
+    - assets/images/classicsofa.png
    
     - assets/
   fonts:
