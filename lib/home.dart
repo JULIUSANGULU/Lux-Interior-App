@@ -10,6 +10,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -150,7 +151,7 @@ class _HomepageState extends State<Homepage> {
                                 ),
                               ),
                               const SizedBox(
-                                height: 18,
+                                height: 30,
                               ),
                               SizedBox(
                                 width: 160,
@@ -192,13 +193,12 @@ class _HomepageState extends State<Homepage> {
                           ),
                         ),
                         Positioned(
-                          right: -20,
-                          bottom: -20,
-                          child: ClipRect(
-                              child: SvgPicture.asset(
-                            'assets/images/chair.svg',
-                            fit: BoxFit.cover,
-                          )),
+                          right: 0,
+                          bottom: 0,
+                          child: SvgPicture.asset(
+                            'assets/images/chair.png',
+                            fit: BoxFit.contain,
+                          ),
                         ),
                       ],
                     ),
@@ -355,6 +355,7 @@ class _HomepageState extends State<Homepage> {
             Padding(
               padding: const EdgeInsets.all(24.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     'Recommendations',
@@ -369,89 +370,320 @@ class _HomepageState extends State<Homepage> {
                   const SizedBox(
                     height: 40,
                   ),
-                  Container(
-                    width: 182,
-                    height: 219,
-                    decoration: ShapeDecoration(
-                      color: const Color(0xFFE9EFF1),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    child: Column(
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
                       children: [
                         Container(
-                          width: 166,
-                          height: 108,
+                          width: 182,
+                          height: 219,
                           decoration: ShapeDecoration(
+                            color: const Color(0xFFE9EFF1),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
-                          child: Image.asset('assets/images/classicsofa.png'),
-                        ),
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                              child: Text(
-                                'Classic Sofa',
-                                style: TextStyle(
-                                  color: Color(0xFF1B5664),
-                                  fontSize: 14,
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w600,
-                                  height: 0.10,
-                                ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Stack(
+                                children: [
+                                  Center(
+                                    child: Padding(
+                                      padding:
+                                          const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                      child: Container(
+                                        width: 166,
+                                        height: 108,
+                                        decoration: ShapeDecoration(
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+                                        ),
+                                        child: Image.asset(
+                                            'assets/images/classicsofa.png'),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 8,
+                                    right: 8,
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        // Add your like functionality here
+                                      },
+                                      child: Container(
+                                        padding: const EdgeInsets.all(4),
+                                        decoration: const BoxDecoration(
+                                          color: Color(0XFFB9CDD2),
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: const Icon(
+                                          Icons.favorite,
+                                          color: Colors.white,
+                                          size: 20,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                      bottom: 8,
+                                      left: 8,
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 6, vertical: 2),
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xFFB9CDD2),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        child: const Row(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.amber,
+                                              size: 16,
+                                            ),
+                                            SizedBox(width: 4),
+                                            Text(
+                                              '4.5',
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      )),
+                                ],
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                              child: Text(
-                                'Lorem ipsum',
-                                style: TextStyle(
-                                  color: Color(0xFF4B7F8B),
-                                  fontSize: 14,
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w300,
-                                  height: 0.10,
-                                ),
+                              const Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(10, 30, 0, 0),
+                                    child: Text(
+                                      'Classic Sofa',
+                                      style: TextStyle(
+                                        color: Color(0xFF1B5664),
+                                        fontSize: 14,
+                                        fontFamily: 'Nunito',
+                                        fontWeight: FontWeight.w600,
+                                        height: 0.10,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(10, 20, 0, 0),
+                                    child: Text(
+                                      'Lorem ipsum',
+                                      style: TextStyle(
+                                        color: Color(0xFF4B7F8B),
+                                        fontSize: 14,
+                                        fontFamily: 'Nunito',
+                                        fontWeight: FontWeight.w300,
+                                        height: 0.10,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(10, 20, 0, 0),
+                                    child: Text(
+                                      '₦95,000',
+                                      style: TextStyle(
+                                        color: Color(0xFF1B5664),
+                                        fontSize: 14,
+                                        fontFamily: 'Nunito',
+                                        fontWeight: FontWeight.w600,
+                                        height: 0.10,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                              child: Text(
-                                'N95,000',
-                                style: TextStyle(
-                                  color: Color(0xFF1B5664),
-                                  fontSize: 14,
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w600,
-                                  height: 0.10,
+                              Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(145, 0, 0, 0),
+                                child: Container(
+                                  width: 33,
+                                  height: 33,
+                                  decoration: const ShapeDecoration(
+                                    color: Color(0xFF1E5F6E),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(10),
+                                        bottomRight: Radius.circular(10),
+                                      ),
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: SvgPicture.asset(
+                                      'assets/images/cartoutline2.svg',
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(140, 0, 0, 0),
-                          child: Container(
-                            width: 33,
-                            height: 33,
-                            decoration: const ShapeDecoration(
-                              color: Color(0xFF1E5F6E),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(10),
-                                  bottomRight: Radius.circular(10),
-                                ),
-                              ),
-                            ),
-                            child: SvgPicture.asset(
-                                'assets/image/cartoutline2.svg'),
+                              )
+                            ],
                           ),
-                        )
+                        ),
+                        Container(
+                          width: 182,
+                          height: 219,
+                          decoration: ShapeDecoration(
+                            color: const Color(0xFFE9EFF1),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Stack(
+                                children: [
+                                  Center(
+                                    child: Padding(
+                                      padding:
+                                          const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                      child: Container(
+                                        width: 166,
+                                        height: 108,
+                                        decoration: ShapeDecoration(
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+                                        ),
+                                        child: Image.asset(
+                                            'assets/images/swingchair.png'),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 8,
+                                    right: 8,
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        // Add your like functionality here
+                                      },
+                                      child: Container(
+                                        padding: const EdgeInsets.all(4),
+                                        decoration: const BoxDecoration(
+                                          color: Color(0XFFB9CDD2),
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: const Icon(
+                                          Icons.favorite,
+                                          color: Colors.white,
+                                          size: 20,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                      bottom: 8,
+                                      left: 8,
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 6, vertical: 2),
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xFFB9CDD2),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        child: const Row(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Icon(
+                                              Icons.star,
+                                              color: Colors.amber,
+                                              size: 16,
+                                            ),
+                                            SizedBox(width: 4),
+                                            Text(
+                                              '4.5',
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      )),
+                                ],
+                              ),
+                              const Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(10, 30, 0, 0),
+                                    child: Text(
+                                      'Swing Chair',
+                                      style: TextStyle(
+                                        color: Color(0xFF1B5664),
+                                        fontSize: 14,
+                                        fontFamily: 'Nunito',
+                                        fontWeight: FontWeight.w600,
+                                        height: 0.10,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(10, 20, 0, 0),
+                                    child: Text(
+                                      'Lorem ipsum',
+                                      style: TextStyle(
+                                        color: Color(0xFF4B7F8B),
+                                        fontSize: 14,
+                                        fontFamily: 'Nunito',
+                                        fontWeight: FontWeight.w300,
+                                        height: 0.10,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(10, 20, 0, 0),
+                                    child: Text(
+                                      '₦70,000',
+                                      style: TextStyle(
+                                        color: Color(0xFF1B5664),
+                                        fontSize: 14,
+                                        fontFamily: 'Nunito',
+                                        fontWeight: FontWeight.w600,
+                                        height: 0.10,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(145, 0, 0, 0),
+                                child: Container(
+                                  width: 33,
+                                  height: 33,
+                                  decoration: const ShapeDecoration(
+                                    color: Color(0xFF1E5F6E),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(10),
+                                        bottomRight: Radius.circular(10),
+                                      ),
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: SvgPicture.asset(
+                                      'assets/images/cartoutline2.svg',
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -461,6 +693,35 @@ class _HomepageState extends State<Homepage> {
           ],
         ),
       ),
+      bottomNavigationBar: SizedBox(
+        height: 82,
+        child: BottomNavigationBar(
+          type: BottomNavigationBarType
+              .fixed, // This ensures all items are always visible
+          currentIndex: _selectedIndex,
+          onTap: (int index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+          selectedItemColor: const Color(0xFF1E5F6E),
+          unselectedItemColor: const Color(0xFF464747),
+          items: [
+            _buildBottomNavItem(Icons.home, 'Home'),
+            _buildBottomNavItem(Icons.category, 'Category'),
+            _buildBottomNavItem(Icons.shopping_cart, 'My order'),
+            _buildBottomNavItem(Icons.favorite, 'Favourite'),
+            _buildBottomNavItem(Icons.person, 'Profile'),
+          ],
+        ),
+      ),
+    );
+  }
+
+  BottomNavigationBarItem _buildBottomNavItem(IconData icon, String label) {
+    return BottomNavigationBarItem(
+      icon: Icon(icon),
+      label: label,
     );
   }
 }
