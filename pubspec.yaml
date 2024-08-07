@@ -85,6 +85,7 @@ flutter:
     - assets/images/Ellipse3.png
     - assets/images/Ellipse4.png
     - assets/images/classicsofa.png
+    - assets/images/cartoutline2.svg
    
     - assets/
   fonts:

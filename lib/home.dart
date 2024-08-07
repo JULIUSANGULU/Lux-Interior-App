@@ -378,15 +378,81 @@ class _HomepageState extends State<Homepage> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    child: Container(
-                      width: 166,
-                      height: 108,
-                      decoration: ShapeDecoration(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 166,
+                          height: 108,
+                          decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: Image.asset('assets/images/classicsofa.png'),
                         ),
-                      ),
-                      child: Image.asset('assets/images/classicsofa.png'),
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                              child: Text(
+                                'Classic Sofa',
+                                style: TextStyle(
+                                  color: Color(0xFF1B5664),
+                                  fontSize: 14,
+                                  fontFamily: 'Nunito',
+                                  fontWeight: FontWeight.w600,
+                                  height: 0.10,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                              child: Text(
+                                'Lorem ipsum',
+                                style: TextStyle(
+                                  color: Color(0xFF4B7F8B),
+                                  fontSize: 14,
+                                  fontFamily: 'Nunito',
+                                  fontWeight: FontWeight.w300,
+                                  height: 0.10,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                              child: Text(
+                                'N95,000',
+                                style: TextStyle(
+                                  color: Color(0xFF1B5664),
+                                  fontSize: 14,
+                                  fontFamily: 'Nunito',
+                                  fontWeight: FontWeight.w600,
+                                  height: 0.10,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(140, 0, 0, 0),
+                          child: Container(
+                            width: 33,
+                            height: 33,
+                            decoration: const ShapeDecoration(
+                              color: Color(0xFF1E5F6E),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10),
+                                  bottomRight: Radius.circular(10),
+                                ),
+                              ),
+                            ),
+                            child: SvgPicture.asset(
+                                'assets/image/cartoutline2.svg'),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ],
