@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:lux_interio_app_new/filter_search.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -58,6 +59,10 @@ class _HomepageState extends State<Homepage> {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextFormField(
+                onTap: () {
+                  // Navigate to the new page
+                  Navigator.pushNamed(context, '/filtersearch');
+                },
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: const Color(0xFFd9d9d9), // Custom fill color
@@ -206,6 +211,7 @@ class _HomepageState extends State<Homepage> {
                 ),
               ],
             ),
+            //Beginning of categories section
             Padding(
               padding: const EdgeInsets.all(24.0),
               child: Row(
@@ -274,6 +280,9 @@ class _HomepageState extends State<Homepage> {
                       ),
                     ],
                   ),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   Column(
                     children: [
                       Container(
@@ -299,6 +308,9 @@ class _HomepageState extends State<Homepage> {
                       ),
                     ],
                   ),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   Column(
                     children: [
                       Container(
@@ -323,6 +335,9 @@ class _HomepageState extends State<Homepage> {
                         ),
                       ),
                     ],
+                  ),
+                  const SizedBox(
+                    width: 7,
                   ),
                   Column(
                     children: [
@@ -352,6 +367,7 @@ class _HomepageState extends State<Homepage> {
                 ],
               ),
             ),
+            //end of categories section
             Padding(
               padding: const EdgeInsets.all(24.0),
               child: Column(

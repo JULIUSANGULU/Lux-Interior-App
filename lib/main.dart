@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lux_interio_app_new/filter_search.dart';
 import 'package:lux_interio_app_new/forgotpassword.dart';
 import 'package:lux_interio_app_new/home.dart';
 import 'package:lux_interio_app_new/login_successful.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         '/newpassword': (context) => const NewPassword(),
         '/verifyemail': (context) => const VerifyEmailaddress(),
         '/home': (context) => const Homepage(),
+        '/filtersearch': (context) => const FilterSearch(),
       },
       //End of routes definition//
     );
