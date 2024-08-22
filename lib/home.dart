@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:lux_interio_app_new/filter_search.dart';
 
@@ -59,10 +58,6 @@ class _HomepageState extends State<Homepage> {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextFormField(
-                onTap: () {
-                  // Navigate to the new page
-                  Navigator.pushNamed(context, '/filtersearch');
-                },
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: const Color(0xFFd9d9d9), // Custom fill color
@@ -82,13 +77,19 @@ class _HomepageState extends State<Homepage> {
                       fit: BoxFit.contain,
                     ),
                   ),
-                  suffixIcon: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SvgPicture.asset(
-                      "assets/images/sliderfilter.svg",
-                      width: 20,
-                      height: 20,
-                      fit: BoxFit.contain,
+                  suffixIcon: GestureDetector(
+                    onTap: () {
+                      // Navigate to the new page
+                      Navigator.pushNamed(context, '/filtersearch');
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SvgPicture.asset(
+                        "assets/images/sliderfilter.svg",
+                        width: 20,
+                        height: 20,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                   border: OutlineInputBorder(
