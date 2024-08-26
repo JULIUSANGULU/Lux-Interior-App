@@ -8,6 +8,7 @@ import 'package:lux_interio_app_new/onboarding_screen_four.dart';
 import 'package:lux_interio_app_new/onboarding_screen_one.dart';
 import 'package:lux_interio_app_new/onboarding_screen_three.dart';
 import 'package:lux_interio_app_new/onboarding_screen_two.dart';
+import 'package:lux_interio_app_new/see_all.dart';
 import 'package:lux_interio_app_new/signin.dart';
 import 'package:lux_interio_app_new/signup.dart';
 import 'package:lux_interio_app_new/verify_emailaddress.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         '/verifyemail': (context) => const VerifyEmailaddress(),
         '/home': (context) => const Homepage(),
         '/filtersearch': (context) => const FilterSearch(),
+        '/seeall': (context) => const SeeAll(),
       },
       //End of routes definition//
     );

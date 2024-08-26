@@ -233,7 +233,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/home');
+                      Navigator.pushNamed(context, '/seeall');
                     },
                     child: const Text(
                       "See All",
