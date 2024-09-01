@@ -100,89 +100,98 @@ class _SeeAllState extends State<SeeAll> {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  width: 387,
-                  height: 130,
-                  decoration: ShapeDecoration(
-                    color: const Color(0xFFEFF0F0),
-                    shape: RoundedRectangleBorder(
-                      side:
-                          const BorderSide(width: 1, color: Color(0xFFCFCFCF)),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(right: 15),
-                        width: 182,
-                        height: 130,
-                        decoration: ShapeDecoration(
-                          image: const DecorationImage(
-                            image: NetworkImage(
-                                "https://via.placeholder.com/182x130"),
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
+                Stack(
+                  children: [
+                    Container(
+                      width: 387,
+                      height: 130,
+                      decoration: ShapeDecoration(
+                        color: const Color(0xFFEFF0F0),
+                        shape: RoundedRectangleBorder(
+                          side: const BorderSide(
+                              width: 1, color: Color(0xFFCFCFCF)),
+                          borderRadius: BorderRadius.circular(15),
                         ),
                       ),
-                      const Row(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Side Table',
-                                  style: TextStyle(
-                                    color: Color(0xFF1B5664),
-                                    fontSize: 14,
-                                    fontFamily: 'Nunito',
-                                    fontWeight: FontWeight.w600,
-                                    height: 0.10,
-                                  )),
-                              SizedBox(
-                                height: 20,
+                          Container(
+                            margin: const EdgeInsets.only(right: 20),
+                            width: 182,
+                            height: 130,
+                            decoration: ShapeDecoration(
+                              image: const DecorationImage(
+                                image: NetworkImage(
+                                    "https://via.placeholder.com/182x130"),
                               ),
-                              Text(
-                                'Lorem ipsum',
-                                style: TextStyle(
-                                  color: Color(0xFF4B7F8B),
-                                  fontSize: 14,
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w300,
-                                  height: 0.10,
-                                ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
                               ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                'N180,000',
-                                style: TextStyle(
-                                  color: Color(0xFF1B5664),
-                                  fontSize: 14,
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w600,
-                                  height: 0.10,
-                                ),
-                              ),
-                            ],
+                            ),
                           ),
-                          // Radio<int>(
-                          //   value: 1,
-                          //   groupValue: _selectedValue,
-                          //   onChanged: (int? value) {
-                          //     setState(() {
-                          //       _selectedValue = value;
-                          //     });
-                          //   },
-                          // ),
+                          const Padding(
+                            padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Side Table',
+                                        style: TextStyle(
+                                          color: Color(0xFF1B5664),
+                                          fontSize: 14,
+                                          fontFamily: 'Nunito',
+                                          fontWeight: FontWeight.w600,
+                                          height: 0.10,
+                                        )),
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    Text(
+                                      'Lorem ipsum',
+                                      style: TextStyle(
+                                        color: Color(0xFF4B7F8B),
+                                        fontSize: 14,
+                                        fontFamily: 'Nunito',
+                                        fontWeight: FontWeight.w300,
+                                        height: 0.10,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    Text(
+                                      'N180,000',
+                                      style: TextStyle(
+                                        color: Color(0xFF1B5664),
+                                        fontSize: 14,
+                                        fontFamily: 'Nunito',
+                                        fontWeight: FontWeight.w600,
+                                        height: 0.10,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                // Radio<int>(
+                                //   value: 1,
+                                //   groupValue: _selectedValue,
+                                //   onChanged: (int? value) {
+                                //     setState(() {
+                                //       _selectedValue = value;
+                                //     });
+                                //   },
+                                // ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ],
             ),
